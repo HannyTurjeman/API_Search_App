@@ -1,0 +1,27 @@
+<div class="up">
+  <h3>Filter By Category:</h3>
+  <select name="category" id="category" (change)="getCategory($event)" >
+    <option *ngFor="let category of categories" [value]="category" [innerText]="category"></option>
+  </select>
+</div>
+
+
+<div>
+  <input type="radio" id='all' name="filter" (change)="getProtocol($event)" checked>
+  <label for="all">All</label>
+  <input type="radio" id='http' name="filter" (change)="getProtocol($event)">
+  <label for="http">HTTP</label>
+  <input type="radio" id='https' name="filter" (change)="getProtocol($event)">
+  <label for="https">HTTPS</label>
+</div>
+
+
+
+
+
+<!-- <div>
+  <h3>Filter By Protocol:</h3>
+  <select name="protocol" id="protocol" >
+    <option *ngFor="let protocol of protocolList" value="protocol" [innerText]="protocol"></option>
+  </select>
+</div> -->

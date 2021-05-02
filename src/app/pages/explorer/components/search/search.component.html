@@ -1,0 +1,13 @@
+<div class="up">
+  <h3>Search By Text:</h3>
+  <input type="text" (keyup)="getTitle($event)" class="textBox">
+</div>
+
+<div class="protocol">
+  <input type="radio" id='all' name="search" (change)="getProtocol($event)" checked>
+  <label for="all">All</label>
+  <input type="radio" id='http' name="search" (change)="getProtocol($event)">
+  <label for="http">HTTP</label>
+  <input type="radio" id='https' name="search" (change)="getProtocol($event)">
+  <label for="https">HTTPS</label>
+</div>

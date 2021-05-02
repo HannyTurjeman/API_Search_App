@@ -1,0 +1,12 @@
+<header>
+  <h3 [innerText]="card.API"></h3>
+</header>
+<section>
+  <p [innerText]="card.Description"></p>
+  <a [href]="card.Link"><i class="fas fa-external-link-alt"></i></a>
+</section>
+<footer>
+  <span id="category" [innerText]="card.Category"></span>
+  <span id="protocol" [ngClass]="{'https' : card.HTTPS}">HTTP<ng-container class="https" *ngIf="card.HTTPS">S</ng-container></span>
+</footer>
+

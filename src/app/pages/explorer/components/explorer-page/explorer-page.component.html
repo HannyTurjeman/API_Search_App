@@ -1,0 +1,11 @@
+<section>
+  <nav>
+    <span>
+      <app-search (title$)="getListByTitle('title',$event)" (protocol$)="getListByTitle('protocol', $event)"></app-search>
+      <app-filter [categories]="listCategories" (category$)="filterByCategory('category', $event)" (protocol$)="filterByCategory('protocol', $event)"></app-filter>
+    </span>
+  </nav>
+  <main>
+    <app-list [list]="listEntries"></app-list>
+  </main>
+</section>

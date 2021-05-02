@@ -1,0 +1,45 @@
+:host {
+  height: 100%;
+}
+
+section {
+  height: 100%;
+  padding: 0;
+
+  nav {
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+    span {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 200px;
+
+    @media screen and (max-width: 500px){
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    }
+
+
+  }
+
+  main {
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 30px;
+    padding-bottom: 270px;
+    height: 100%;
+    background-color: rgb(82, 80, 80);
+    margin: 0;
+
+    @media screen and (max-width: 500px){
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+
