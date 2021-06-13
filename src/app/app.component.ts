@@ -9,10 +9,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'apiSearchApp';
+  agree:boolean =  false ;
 
-  constructor(
-) {}
+  constructor() {
+    localStorage.setItem('agree', 'false');
+  }
 
+
+
+
+saveAgree() {
+  this.agree = true;
+  localStorage.setItem('agree', 'true');
+  console.log(this.agree);
+}
 
 
 

@@ -1,12 +1,15 @@
 <header>
   <h1>API Search Engine</h1>
+  <p *ngIf="!agree">Please agree to the terms <button (click)="saveAgree()">I Agree</button></p>
+
 </header>
 
-<div>
+
+<div *ngIf="agree">
   <button id='about' routerLink="/about">About</button>
   <button id='explorer' routerLink="/explorer">Explorer</button>
 </div>
 
-<section>
+<section *ngIf="agree">
   <router-outlet></router-outlet>
 </section>

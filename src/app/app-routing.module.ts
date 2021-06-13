@@ -1,17 +1,21 @@
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router'; // CLI imports router
-import { AppComponent } from './app.component';
+import { TermsGuardGuard } from './guards/terms-guard.guard';
 
 // sets up routes constant where you define your routes
 const routes: Routes = [
 
+
   {
   path: 'about',
-  loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule)
+  loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule),
+  canActivate: [TermsGuardGuard]
+
 },
 {
   path: 'explorer',
-  loadChildren: () => import('./pages/explorer/explorer.module').then(m => m.ExplorerModule)
+  loadChildren: () => import('./pages/explorer/explorer.module').then(m => m.ExplorerModule),
+  canActivate: [TermsGuardGuard]
 },
 {
   path:'**',
